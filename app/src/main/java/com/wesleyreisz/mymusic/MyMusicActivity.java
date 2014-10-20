@@ -22,7 +22,8 @@ public class MyMusicActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.listViewSongList);
                 List<Song> songs = new MockMusicService().findAll();
 
-        SongAdaptor songAdaptor = new SongAdaptor();
+        SongAdaptor songAdaptor = new SongAdaptor(this,R.layout.activity_my_music,songs);
+        listView.setAdapter(songAdaptor);
     }
 
 
