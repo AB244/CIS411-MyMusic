@@ -39,10 +39,10 @@ public class SongAdaptor extends ArrayAdapter<Song>{
             textViewTitle.setText(song.getSongTitle());
 
             TextView textViewArtist = (TextView)view.findViewById(R.id.textViewSongArtist);
-            textViewTitle.setText(song.getArtistName());
+            textViewArtist.setText(song.getArtistName());
 
             TextView textViewPubDate = (TextView)view.findViewById(R.id.textViewSongDate);
-            textViewTitle.setText(df.format(song.getSongPublishedDate()));
+            textViewPubDate.setText(df.format(song.getSongPublishedDate()));
 
         }
         return view;
