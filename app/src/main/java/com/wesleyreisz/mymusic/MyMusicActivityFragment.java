@@ -20,7 +20,7 @@ public class MyMusicActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.activity_my_music_fragment,container,false);
+        return inflater.inflate(R.layout.activity_music_fragment,container,false);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class MyMusicActivityFragment extends Fragment {
         ListView listView = (ListView) getView().findViewById(R.id.listViewSongList);
                 List<Song> songs = new MockMusicService().findAll();
 
-        SongAdaptor songAdaptor = new SongAdaptor(getActivity(),R.layout.activity_my_music,songs);
+        SongAdaptor songAdaptor = new SongAdaptor(getActivity(),R.layout.activity_music_fragment,songs);
         listView.setAdapter(songAdaptor);
     }
 
