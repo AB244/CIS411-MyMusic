@@ -30,15 +30,13 @@ public class MyMusicActivityFragment extends Fragment {
         ListView listView = (ListView) getView().findViewById(R.id.listViewSongList);
                 List<Song> songs = new MockMusicService().findAll();
 
-        SongAdaptor songAdaptor = new SongAdaptor(this,R.layout.activity_my_music,songs);
+        SongAdaptor songAdaptor = new SongAdaptor(getActivity(),R.layout.activity_my_music,songs);
         listView.setAdapter(songAdaptor);
     }
 
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my_music, menu);
+        getActivity().getMenuInflater().inflate(R.menu.my_music, menu);
         return true;
     }
 
